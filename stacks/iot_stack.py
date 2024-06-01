@@ -14,4 +14,9 @@ class IotStack(Stack):
         s3_destination = destinations.S3Bucket(
             bucket, compression=destinations.Compression.SNAPPY
         )
-        firehose.DeliveryStream(self, "Delivery Stream", destinations=[s3_destination])
+        firehose.DeliveryStream(
+            self,
+            "Delivery Stream",
+            delivery_stream_name="IotStream",
+            destinations=[s3_destination],
+        )
