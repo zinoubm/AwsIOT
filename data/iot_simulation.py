@@ -3,7 +3,7 @@ import boto3
 import json
 from tqdm import tqdm
 
-DELIVERY_STREAM_NAME = "IotStream"
+DELIVERY_STREAM_NAME = "Iot-stream"
 
 
 def send_batch_to_firehose(batch):
